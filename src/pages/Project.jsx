@@ -1,38 +1,42 @@
-import imageProjet from "../assets/NLP_app.png";
+import { useParams, Link } from "react-router-dom";
+import ProjectData from "../data/projectsData";
 
-function Projet() {
+function Project() {
+  const { id } = useParams();
+  const project = ProjectData[id];
+  const {
+    tools,
+    title,
+    image,
+    description,
+    relatedProjects
+  } = project;
   return (
     <section className="pt-24 pb-40 lg:pt-40 lg:pb-40 flex justify-center bg-[#171718]">
       <article className="max-w-screen-xl lg:mx-8">
         <div className="text-center">
           <span className="uppercase font-semibold text-[#FFFFFF] mx-2 text-xs">
-            Node JS
+            {tools.tool1}
           </span>
           <span className="uppercase font-semibold text-[#FFFFFF] mx-2 text-xs">
-            Express
+            {tools.tool2}
           </span>
           <span className="uppercase font-semibold text-[#FFFFFF] mx-2 text-xs">
-            API
+            {tools.tool3}
           </span>
         </div>
         <h1 className="text-2xl lg:text-4xl text-center mx-4 lg:mx-0 text-[#FFFFFF]">
-          Evaluate news article app
+          {title}
         </h1>
         <div className="h-72 lg:h-1/3 w-full lg:px-16 mt-12 mb-12 lg:mb-16">
           <img
             className="h-full w-full object-cover"
-            src={imageProjet}
+            src={image}
             alt="An open notebook with a coffee cup on a desk."
           />
         </div>
         <div className="max-w-prose mx-6 lg:mx-auto text-[#D1D5DB]">
-          <p className="mb-4 text-lg lg:text-xl font-semibold">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
-            eligendi libero sit nihil tempora, totam reprehenderit aliquam
-            beatae obcaecati ratione. Libero consequatur cumque magnam ipsam
-            quae sequi laudantium pariatur veritatis? Totam reprehenderit
-            aliquame.
-          </p>
+          <p className="mb-4 text-lg lg:text-xl font-semibold">{description}</p>
           <button
             className="inline-block mb-4 px-5 py-3 rounded-lg  bg-[#85BFD1] hover:bg-[#9fc7d3] text-sm text-[#FFFFFF] uppercase tracking-wider font-semibold"
             href="#"
@@ -104,22 +108,34 @@ function Projet() {
         </h2>
 
         <div className=" relative flex flex-row gap-1 md:mb-36  ">
-          <div class="composite_deck relative h-96 flex-grow-1 w-full">
-            <a href="/composite_decks.html">
-              <div class="absolute top-0 left-0 w-full h-full bg-black opacity-60 transition-opacity duration-500 hover:opacity-20 cursor-pointer z-10"></div>
-              <h2 class="absolute uppercase pl-4 lg:pl-10 pb-2 lg:pb-8 bottom-0 font-medium text-lg lg:text-xl text-gray-100 z-20">
-                Portfolio Website Marketing
+          <div className="composite_deck relative h-96 flex-grow-1 w-full">
+            <Link to={relatedProjects.link1}>
+              <div className="absolute top-0 left-0 w-full h-full bg-black opacity-60 transition-opacity duration-500 hover:opacity-20 cursor-pointer z-10">
+                <img
+                  className="h-full w-full object-cover"
+                  src={relatedProjects.image1}
+                  alt="An open notebook with a coffee cup on a desk."
+                />
+              </div>
+              <h2 className="absolute uppercase pl-4 lg:pl-10 pb-2 lg:pb-8 bottom-0 font-medium text-lg lg:text-xl text-gray-100 z-20">
+                {relatedProjects.title1}
               </h2>
-            </a>
+            </Link>
           </div>
 
-          <div class="hardwood_deck relative h-96 flex-grow-1 w-full">
-            <a href="/hardwood_decks.html">
-              <div class="absolute top-0 left-0 w-full h-full bg-black opacity-60 transition-opacity duration-500 hover:opacity-20 cursor-pointer z-10"></div>
-              <h2 class="absolute uppercase pl-4 lg:pl-10 pb-2 lg:pb-8  bottom-0 font-medium text-lg lg:text-xl text-gray-100 z-20">
-                Travel App
+          <div className="hardwood_deck relative h-96 flex-grow-1 w-full">
+            <Link to={relatedProjects.link2}>
+              <div className="absolute top-0 left-0 w-full h-full bg-black opacity-60 transition-opacity duration-500 hover:opacity-20 cursor-pointer z-10">
+                <img
+                  className="h-full w-full object-cover"
+                  src={relatedProjects.image2}
+                  alt="An open notebook with a coffee cup on a desk."
+                />
+              </div>
+              <h2 className="absolute uppercase pl-4 lg:pl-10 pb-2 lg:pb-8  bottom-0 font-medium text-lg lg:text-xl text-gray-100 z-20">
+                {relatedProjects.title2}
               </h2>
-            </a>
+            </Link>
           </div>
         </div>
       </article>
@@ -127,4 +143,4 @@ function Projet() {
   );
 }
 
-export default Projet;
+export default Project;

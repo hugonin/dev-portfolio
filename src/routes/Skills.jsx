@@ -1,5 +1,5 @@
-import EntrySkills from "../components/EntrySkills";
-import Skills_Data from "../data/skills-data";
+import SkillList from "../components/SkillList";
+import SkillData from "../data/skillsData";
 
 function Skills() {
   return (
@@ -18,8 +18,8 @@ function Skills() {
         </div>
 
         <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8">
-          {Skills_Data.map((skillItem) => (
-            <EntrySkills
+          {SkillData.map((skillItem) => (
+            <SkillList
               key={skillItem.id}
               image={skillItem.image}
               alt={skillItem.alt}

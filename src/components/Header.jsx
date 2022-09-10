@@ -3,77 +3,73 @@ import { FaBars, FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import Logo from "../assets/Logo_JHDK_.svg";
-import { Link } from "react-scroll";
+import { Outlet, Link, NavLink } from "react-router-dom";
 
-const Navbar = () => {
+function Header() {
   const [nav, setNav] = useState(false);
   const handleClick = () => setNav(!nav);
 
   return (
     <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#1C1E22] text-gray-100">
       <div>
-        <img src={Logo} alt="site-logo" style={{ width: "75px" }} />
+        <Link to="/">
+          <img src={Logo} alt="site-logo" style={{ width: "75px" }} />
+        </Link>
       </div>
-
-      {/* menu */}
       <ul className="hidden md:flex">
         <li>
-          <Link
-            to="hero"
-            smooth={true}
-            duration={500}
-            activeClass="active"
-            spy={true}
+          {" "}
+          <NavLink
+            style={({ isActive }) => {
+              return { color: isActive ? "#85BFD1" : "" };
+            }}
+            to="/"
           >
             Accueil
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link
-            to="about"
-            smooth={true}
-            duration={500}
-            activeClass="active"
-            spy={true}
+          <NavLink
+            style={({ isActive }) => {
+              return { color: isActive ? "#85BFD1" : "" };
+            }}
+            to="/about"
           >
             A propos
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link
-            to="skills"
-            smooth={true}
-            duration={500}
-            activeClass="active"
-            spy={true}
+          <NavLink
+            style={({ isActive }) => {
+              return { color: isActive ? "#85BFD1" : "" };
+            }}
+            to="/skills"
           >
             Compétences
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link
-            to="work"
-            smooth={true}
-            duration={500}
-            activeClass="active"
-            spy={true}
+          <NavLink
+            style={({ isActive }) => {
+              return { color: isActive ? "#85BFD1" : "" };
+            }}
+            to="/projects"
           >
             Projets
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link
-            to="contact"
-            smooth={true}
-            duration={500}
-            activeClass="active"
-            spy={true}
+          <NavLink
+            style={({ isActive }) => {
+              return { color: isActive ? "#85BFD1" : "" };
+            }}
+            to="/contact"
           >
             Contact
-          </Link>
+          </NavLink>
         </li>
       </ul>
-
+      <Outlet />
       {/* Hamburger */}
       <div onClick={handleClick} className="md:hidden z-10 cursor-pointer">
         {!nav ? <FaBars /> : <FaTimes />}
@@ -88,31 +84,31 @@ const Navbar = () => {
         }
       >
         <li className="py-6 text-4xl hover:text-[#85BFD1]">
-          <Link onClick={handleClick} to="hero" smooth={true} duration={500}>
+          <Link onClick={handleClick} to="/">
             Accueil
           </Link>
         </li>
         <li className="py-6 text-4xl hover:text-[#85BFD1]">
           {" "}
-          <Link onClick={handleClick} to="about" smooth={true} duration={500}>
+          <Link onClick={handleClick} to="/about">
             A propos
           </Link>
         </li>
         <li className="py-6 text-4xl hover:text-[#85BFD1]">
           {" "}
-          <Link onClick={handleClick} to="skills" smooth={true} duration={500}>
+          <Link onClick={handleClick} to="/skills">
             Compétences
           </Link>
         </li>
         <li className="py-6 text-4xl hover:text-[#85BFD1]">
           {" "}
-          <Link onClick={handleClick} to="work" smooth={true} duration={500}>
+          <Link onClick={handleClick} to="/projects">
             Projets
           </Link>
         </li>
         <li className="py-6 text-4xl hover:text-[#85BFD1]">
           {" "}
-          <Link onClick={handleClick} to="contact" smooth={true} duration={500}>
+          <Link onClick={handleClick} to="/contact">
             Contact
           </Link>
         </li>
@@ -157,6 +153,6 @@ const Navbar = () => {
       </div>
     </div>
   );
-};
+}
 
-export default Navbar;
+export default Header;

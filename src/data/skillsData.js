@@ -7,7 +7,7 @@ import FireBase from "../assets/firebase.png";
 import Git from "../assets/Git.png";
 import Express from "../assets/expressjs.png";
 
-const Skills_Data = [
+const SkillData = [
   {
     id: 1,
     image: HTML,
@@ -58,4 +58,4 @@ const Skills_Data = [
   },
 ];
 
-export default Skills_Data;
+export default SkillData;

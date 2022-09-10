@@ -1,6 +1,9 @@
-import { Link } from "react-scroll";
+import { useNavigate } from "react-router-dom";
+
 
 function Hero() {
+   const navigate = useNavigate();
+
   return (
     <section id="hero" className="w-full h-screen bg-[#171718]">
       {/* Container */}
@@ -18,14 +21,13 @@ function Hero() {
           maintenable et facile à comprendre.
         </p>
         <div>
-          <Link to="work" smooth={true}>
-            <button
-              className="inline-block px-5 py-3 rounded-lg shadow-lg bg-[#85BFD1] hover:bg-[#9fc7d3] text-sm text-[#FFFFFF] uppercase tracking-wider font-semibold"
-              href="#"
-            >
-              Voir mes projets
-            </button>
-          </Link>
+        <button
+            className="inline-block px-5 py-3 rounded-lg shadow-lg bg-[#85BFD1] hover:bg-[#9fc7d3] text-sm text-[#FFFFFF] uppercase tracking-wider font-semibold"
+             onClick={() => navigate("/projects")}
+          >
+            Voir mes projets
+          </button>
+          
         </div>
       </div>
     </section>
