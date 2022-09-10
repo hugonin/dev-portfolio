@@ -6,7 +6,7 @@ function Skills() {
     <section id="skills" className="w-full h-screen bg-[#171718] text-gray-300">
       {/* Container */}
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
-        <div>
+        <div className="pt-20">
           <p className="text-4xl font-bold inline border-b-4 border-[#85BFD1] ">
             Compétences
           </p>

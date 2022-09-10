@@ -4,12 +4,12 @@ function About() {
   return (
     <section
       id="about"
-      className="card w-full h-screen bg-[#1C1E22] text-gray-300"
+      className=" bg-[#1C1E22] text-gray-300"
     >
-      <div className="flex flex-col justify-center items-center w-full h-full">
+      <div className="flex flex-col justify-center items-center w-full h-full ">
         <div className="max-w-[1000px] w-full grid grid-cols-2 gap-8">
-          <div className="sm:text-right pb-8 pl-4">
-            <p className="text-4xl font-bold inline border-b-4 border-[#85BFD1]">
+          <div className=" pt-20 pb-8 pl-4">
+            <p className="text-4xl font-bold inline border-b-4 border-[#85BFD1] ">
               A propos
             </p>
           </div>
@@ -41,8 +41,8 @@ function About() {
               envoyez-moi un message et travaillons ensemble.
             </p>
           </div>
-          <div className="bg-cover bg-center ">
-            <img className="w-full object-cover rounded-md" src={Profil} alt="profil" />
+          <div className="bg-cover bg-center pb-16 ">
+            <img className="h-full w-full object-cover rounded-md" src={Profil} alt="profil" />
           </div>
         </div>
       </div>

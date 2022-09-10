@@ -14,7 +14,8 @@ function Contact() {
             Contact
           </p>
           <p className="text-gray-300 py-4">
-             Complétez le formulaire ci-dessous ou envoyez-moi un email - contact@jeanhuguesdoumbekingue.ovh
+            Complétez le formulaire ci-dessous ou envoyez-moi un email -
+            contact@jeanhuguesdoumbekingue.ovh
           </p>
         </div>
         <input
@@ -35,9 +36,12 @@ function Contact() {
           rows="10"
           placeholder="Message"
         ></textarea>
-                <button className=" px-5 py-3 my-8 mx-auto flex items-center rounded-lg shadow-lg bg-[#85BFD1] hover:bg-[#9fc7d3] text-sm text-[#FFFFFF] uppercase tracking-wider font-semibold" href="#">Travaillons ensemble</button>
-
-       
+        <button
+          className=" px-5 py-3 my-8 mx-auto flex items-center rounded-lg shadow-lg bg-[#85BFD1] hover:bg-[#9fc7d3] text-sm text-[#FFFFFF] uppercase tracking-wider font-semibold"
+          href="#"
+        >
+          Travaillons ensemble
+        </button>
       </form>
     </div>
   );

@@ -15,13 +15,13 @@ function Project() {
     <section className="pt-24 pb-40 lg:pt-40 lg:pb-40 flex justify-center bg-[#171718]">
       <article className="max-w-screen-xl lg:mx-8">
         <div className="text-center">
-          <span className="uppercase font-semibold text-[#FFFFFF] mx-2 text-xs">
+          <span className=" font-semibold bg-gray-200 rounded-full px-3 py-1 text-sm text-gray-700 mr-2 mb-2">
             {tools.tool1}
           </span>
-          <span className="uppercase font-semibold text-[#FFFFFF] mx-2 text-xs">
+          <span className=" font-semibold bg-gray-200 rounded-full px-3 py-1 text-sm text-gray-700 mr-2 mb-2">
             {tools.tool2}
           </span>
-          <span className="uppercase font-semibold text-[#FFFFFF] mx-2 text-xs">
+          <span className=" font-semibold bg-gray-200 rounded-full px-3 py-1 text-sm text-gray-700 mr-2 mb-2">
             {tools.tool3}
           </span>
         </div>
