@@ -4,13 +4,8 @@ import ProjectData from "../data/projectsData";
 function Project() {
   const { id } = useParams();
   const project = ProjectData[id];
-  const {
-    tools,
-    title,
-    image,
-    description,
-    relatedProjects
-  } = project;
+  const { tools, title, image, description, relatedProjects, links, content } =
+    project;
   return (
     <section className="pt-24 pb-40 lg:pt-40 lg:pb-40 flex justify-center bg-[#171718]">
       <article className="max-w-screen-xl lg:mx-8">
@@ -25,7 +20,7 @@ function Project() {
             {tools.tool3}
           </span>
         </div>
-        <h1 className="text-2xl lg:text-4xl text-center mx-4 lg:mx-0 text-[#FFFFFF]">
+        <h1 className="text-2xl lg:text-4xl text-center mx-4 mt-2 lg:mx-0 text-[#FFFFFF]">
           {title}
         </h1>
         <div className="h-72 lg:h-1/3 w-full lg:px-16 mt-12 mb-12 lg:mb-16">
@@ -37,70 +32,36 @@ function Project() {
         </div>
         <div className="max-w-prose mx-6 lg:mx-auto text-[#D1D5DB]">
           <p className="mb-4 text-lg lg:text-xl font-semibold">{description}</p>
-          <button
-            className="inline-block mb-4 px-5 py-3 rounded-lg  bg-[#85BFD1] hover:bg-[#9fc7d3] text-sm text-[#FFFFFF] uppercase tracking-wider font-semibold"
-            href="#"
-          >
-            Code
-          </button>
-          <button
-            className="inline-block mb-4 ml-2 px-5 py-3 rounded-lg  bg-[#85BFD1] hover:bg-[#9fc7d3] text-sm text-[#FFFFFF] uppercase tracking-wider font-semibold"
-            href="#"
-          >
-            Live
-          </button>
+          <a href={links.code} target="_blank" rel="noreferrer">
+            <button className="inline-block mb-4 px-5 py-3 rounded-lg  bg-[#85BFD1] hover:bg-[#9fc7d3] text-sm text-[#FFFFFF] uppercase tracking-wider font-semibold">
+              Code
+            </button>
+          </a>
+          <a href={links.live} target="_blank" rel="noreferrer">
+            <button className="inline-block mb-4 ml-2 px-5 py-3 rounded-lg  bg-[#85BFD1] hover:bg-[#9fc7d3] text-sm text-[#FFFFFF] uppercase tracking-wider font-semibold">
+              Live
+            </button>
+          </a>
 
           <h2 className="text-xl lg:text-2xl mt-6 mb-4 text-[#D1D5DB]">
             But et objectifs du projet
           </h2>
-          <p className="mb-4">
-            Nunc dictum nec tellus nec hendrerit. Etiam leo felis, congue vitae
-            placerat vel, vestibulum id massa. Maecenas cursus, ante sit amet
-            placerat rhoncus, risus est auctor diam, in pulvinar magna lectus at
-            erat.
-          </p>
+          <p className="mb-4">{content.goal}</p>
 
           <h2 className="text-xl lg:text-2xl mt-12 mb-4 text-[#D1D5DB]">
             Choix de la stack
           </h2>
-          <p className="mb-4">
-            Nunc dictum nec tellus nec hendrerit. Etiam leo felis, congue vitae
-            placerat vel, vestibulum id massa. Maecenas cursus, ante sit amet
-            placerat rhoncus, risus est auctor diam, in pulvinar magna lectus at
-            erat.
-          </p>
-          <p className="mb-4">
-            Nullam eget neque tellus. In tellus odio, pretium ac risus vitae,
-            bibendum dignissim lectus. Vestibulum hendrerit libero nec mauris
-            feugiat vehicula. Duis malesuada diam tempor odio efficitur, vitae
-            faucibus purus ornare.
-          </p>
+          <p className="mb-4">{content.choice}</p>
 
           <h2 className="text-xl lg:text-2xl mt-12 mb-4 text-[#D1D5DB]">
             Problèmes et résolutions
           </h2>
-          <p className="mb-4">
-            Nunc dictum nec tellus nec hendrerit. Etiam leo felis, congue vitae
-            placerat vel, vestibulum id massa. Maecenas cursus, ante sit amet
-            placerat rhoncus, risus est auctor diam, in pulvinar magna lectus at
-            erat.
-          </p>
-          <p className="mb-4">
-            Nullam eget neque tellus. In tellus odio, pretium ac risus vitae,
-            bibendum dignissim lectus. Vestibulum hendrerit libero nec mauris
-            feugiat vehicula. Duis malesuada diam tempor odio efficitur, vitae
-            faucibus purus ornare.
-          </p>
+          <p className="mb-4">{content.problems}</p>
 
           <h2 className="text-xl lg:text-2xl mt-12 mb-4 text-[#D1D5DB]">
             Retour d'expérience
           </h2>
-          <p className="mb-4">
-            Nullam eget neque tellus. In tellus odio, pretium ac risus vitae,
-            bibendum dignissim lectus. Vestibulum hendrerit libero nec mauris
-            feugiat vehicula. Duis malesuada diam tempor odio efficitur, vitae
-            faucibus purus ornare.
-          </p>
+          <p className="mb-4">{content.exp}</p>
         </div>
 
         <h2 className="text-xl lg:text-3xl mt-12 mb-4 m-3 text-[#D1D5DB]">

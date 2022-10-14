@@ -1,7 +1,8 @@
+import PropTypes from "prop-types"
 import { Link } from "react-router-dom";
 import ProjectData from "../data/projectsData";
 
-function ProjectList() {
+function ProjectList({title,paragraph,cta}) {
   return (
     <section
       id="projects"
@@ -10,12 +11,10 @@ function ProjectList() {
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
         <div className="pt-20">
           <p className="text-4xl font-bold inline border-b-4 text-gray-300 border-[#85BFD1]">
-            Projets
+            {title}
           </p>
           <p className="py-6">
-            Le moyen le plus sûr pour moi de monter en compétences est de
-            pouvoir coder en permanence. Jetez un oeil à cette sélection de
-            projets sur lesquels j'ai eu à passer mon temps
+            {paragraph}
           </p>
         </div>
 
@@ -23,14 +22,17 @@ function ProjectList() {
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
           {ProjectData.map((projectItem) => (
             <div key={projectItem.id}>
-              <img
-                className="rounded-lg shadow-xl"
-                src={projectItem.image}
-                alt={projectItem.alt}
-              />
-              <h1 className="mt-6 text-2xl font-bold leading-tight">
-                {projectItem.title}
-              </h1>
+              <Link to={`/projects/${projectItem.id}`}>
+                <img
+                  className="object-cover h-48 w-full  rounded-lg shadow-xl"
+                  src={projectItem.image}
+                  alt={projectItem.alt}
+                />
+                <h1 className="mt-6 text-2xl font-bold leading-tight">
+                  {projectItem.title}
+                </h1>
+              </Link>
+
               <p className="mt-2">{projectItem.description}</p>
 
               <div className="mt-2">
@@ -49,7 +51,7 @@ function ProjectList() {
                 <button className="inline-block px-5 py-3 rounded-lg shadow-lg bg-[#85BFD1] hover:bg-[#9fc7d3] text-sm text-[#FFFFFF] uppercase tracking-wider font-semibold">
                   <Link to={`/projects/${projectItem.id}`}>
                     {" "}
-                    Voir le projet
+                    {cta}
                   </Link>
                 </button>
               </div>
@@ -62,3 +64,16 @@ function ProjectList() {
 }
 
 export default ProjectList;
+
+
+ProjectList.defaultProps = {
+  title: "Projets",
+  paragraph: "Ci-dessous une sélection de mes projets",
+  cta: "En savoir plus"
+}
+
+ProjectList.propTypes = {
+  title: PropTypes.string,
+  paragraph: PropTypes.string,
+  cta: PropTypes.string
+}

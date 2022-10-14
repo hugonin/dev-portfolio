@@ -23,7 +23,7 @@ function Footer() {
             to="/projects/1"
             className="mx-7 hover:text-[#85BFD1] mb-2 lg:mb-0"
           >
-            Quote Generator App
+            Blog App
           </Link>
           <Link
             to="/projects/2"
@@ -33,15 +33,15 @@ function Footer() {
           </Link>
         </ul>
         <div className="flex text-gray-500">
-          <Link to="/twitter.com" className="hover:text-[#85BFD1]">
+          <a href="https://twitter.com/JHDoumbe" target="_blank" rel="noreferrer" className="hover:text-[#85BFD1]" >
             <FaTwitter className="mx-4 fill-current" />
-          </Link>
-          <Link to="/github.com" className="hover:text-[#85BFD1]">
+          </a>
+          <a href="https://github.com/hugonin" target="_blank" rel="noreferrer" className="hover:text-[#85BFD1]">
             <FaGithub className="mx-4 fill-current" />
-          </Link>
-          <Link to="/linkedin.com" className="hover:text-[#85BFD1]">
+          </a>
+          <a href="https://www.linkedin.com/in/jhdoumbekingue/" target="_blank" rel="noreferrer" className="hover:text-[#85BFD1]">
             <FaLinkedin className="mx-4 fill-current" />
-          </Link>
+          </a>
         </div>
       </div>
 

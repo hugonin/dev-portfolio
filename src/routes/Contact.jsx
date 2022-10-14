@@ -1,4 +1,6 @@
-function Contact() {
+import PropTypes from "prop-types";
+
+function Contact({ title, paragraph, cta }) {
   return (
     <div
       id="contact"
@@ -11,12 +13,9 @@ function Contact() {
       >
         <div className="pb-8">
           <p className="text-4xl font-bold inline border-b-4 border-[#85BFD1] text-gray-300">
-            Contact
+            {title}
           </p>
-          <p className="text-gray-300 py-4">
-            Complétez le formulaire ci-dessous ou envoyez-moi un email -
-            contact@jeanhuguesdoumbekingue.ovh
-          </p>
+          <p className="text-gray-300 py-4">{paragraph}</p>
         </div>
         <input
           className="bg-[#e0e5f6] p-2"
@@ -40,7 +39,7 @@ function Contact() {
           className=" px-5 py-3 my-8 mx-auto flex items-center rounded-lg shadow-lg bg-[#85BFD1] hover:bg-[#9fc7d3] text-sm text-[#FFFFFF] uppercase tracking-wider font-semibold"
           href="#"
         >
-          Travaillons ensemble
+          {cta}
         </button>
       </form>
     </div>
@@ -48,3 +47,16 @@ function Contact() {
 }
 
 export default Contact;
+
+Contact.defaultProps = {
+  title: "Contact",
+  paragraph:
+    "Complétez le formulaire ci-dessous ou envoyez-moi un email - contact@jeanhuguesdoumbekingue.ovh",
+  cta: "Travaillons ensemble",
+};
+
+Contact.propTypes = {
+  title: PropTypes.string,
+  paragraph: PropTypes.string,
+  cta: PropTypes.string,
+};

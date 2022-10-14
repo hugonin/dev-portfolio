@@ -3,7 +3,7 @@ import CSS from "../assets/css.png";
 import JavaScript from "../assets/javascript.png";
 import ReactImg from "../assets/react.png";
 import Node from "../assets/node.png";
-import FireBase from "../assets/firebase.png";
+import Mongo from "../assets/mongo.png";
 import Git from "../assets/Git.png";
 import Express from "../assets/expressjs.png";
 
@@ -52,9 +52,9 @@ const SkillData = [
   },
   {
     id: 8,
-    image: FireBase,
-    alt: "Firebase icon",
-    title: "FIREBASE",
+    image: Mongo,
+    alt: "Mongo DB icon",
+    title: "MONGO",
   },
 ];
 
