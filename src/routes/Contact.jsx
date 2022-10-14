@@ -8,7 +8,7 @@ function Contact({ title, paragraph, cta }) {
     >
       <form
         method="POST"
-        action="https://getform.io/f/a699a1b2-f225-434e-b317-1fbbde8e006c"
+        action="https://getform.io/f/92d396ea-5c3e-4c4f-b393-3866b1464841"
         className="flex flex-col max-w-[600px] w-full"
       >
         <div className="pb-8">
