@@ -36,7 +36,7 @@ Hero.defaultProps = {
   name: "Jean-Hugues Doumbe Kingue",
   position: "Développeur",
   content:
-    "Je suis un développeur front-end qui crée et designe des sites et applications web, agréables à utilser mais aussi dont le code est maintenable et facile à comprendre",
+    "Je suis un développeur web front-end qui crée et designe des sites et applications web.",
   cta: "Voir mes projets",
 };
 
