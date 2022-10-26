@@ -34,9 +34,9 @@ export default Hero;
 Hero.defaultProps = {
   greeting: "Hello, je suis",
   name: "Jean-Hugues Doumbe Kingue",
-  position: "Développeur",
+  position: "Développeur front-end",
   content:
-    "Je suis un développeur web front-end qui crée et designe des sites et applications web.",
+    "Je crée et développe des sites et applications web dynamiques pour une expérience utilisateur optimale.",
   cta: "Voir mes projets",
 };
 
