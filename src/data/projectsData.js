@@ -17,7 +17,7 @@ const ProjectData = [
     },
     links: {
       code: "https://github.com/hugonin/news-article-evaluation",
-      live: "https://murmuring-crag-39577.herokuapp.com/"
+      live: "https://node-app-eval.onrender.com"
     },
     content: {
       goal: "Le but de ce projet est de permettre aux utilisateurs d'avoir des informations pertinentes sur les articles de blogs qu'ils consultent sur le net. En soumettant l'url d'un article dans le champ dédié de l'application, on obtient des résultats sur la qualité du contenu (objectif ou subjectif) et la tonalité (positif, neutre ou négatif)  ",
