@@ -48,7 +48,7 @@ const ProjectData = [
     },
     links: {
       code: "https://github.com/hugonin/blog-app",
-      live: "https://hugoninblogapp.herokuapp.com/"
+      live: "https://blog-app-client.onrender.com/"
     },
     content: {
       goal: "Le but de ce projet est de permettre aux utilisateurs inscrits de créer des articles et de les visualiser sous la forme d'un blog. L'objectif ici est de créer une application fullstack, avec authentification et usage d'une base de données",
